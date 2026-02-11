@@ -6,12 +6,12 @@ import styled from "styled-components"
 
 import useSiteMetadata from "~/src/hooks/useSiteMetadata"
 
-// Import config directly for social links to avoid GraphQL schema issues
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const meta = require("../../../gatsby-meta-config")
+import meta from "../../../gatsby-meta-config"
 
 const isExternalOrFileLink = (url: string) =>
-  /^https?:\/\//.test(url) || /[\w~-]+(\.[\w~-]+)+/.test(url) || /\.\w+$/.test(url)
+  /^https?:\/\//.test(url) ||
+  /[\w~-]+(\.[\w~-]+)+/.test(url) ||
+  /\.\w+$/.test(url)
 
 const socialIcons: Record<string, React.ReactNode> = {
   github: (
@@ -78,7 +78,7 @@ const Footer: React.FC = () => {
           <SocialIcons>
             {Object.entries(links).map(([name, url]) => {
               const icon = socialIcons[name]
-              if (!icon) return null
+              if (!icon) return
               return (
                 <a
                   key={name}

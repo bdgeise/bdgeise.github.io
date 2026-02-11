@@ -11,8 +11,9 @@ interface UseMenuProperties {
   device: (typeof styledTheme)["device"]
 }
 
-interface NonNullableReference<Type>
-  extends NonNullable<React.RefObject<Type>> {
+interface NonNullableReference<Type> extends NonNullable<
+  React.RefObject<Type>
+> {
   current: Type
 }
 
