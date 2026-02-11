@@ -16,7 +16,6 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
-    defaults:
     steps:
       - name: Checkout
         uses: actions/checkout@v4

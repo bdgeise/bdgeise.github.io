@@ -10,7 +10,6 @@ jobs:
   build:
     name: Build & Lint
     runs-on: ubuntu-latest
-    defaults:
     permissions:
       contents: write
 
