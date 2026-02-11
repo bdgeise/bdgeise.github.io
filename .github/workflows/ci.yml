@@ -11,8 +11,6 @@ jobs:
     name: Build & Lint
     runs-on: ubuntu-latest
     defaults:
-      run:
-        working-directory: blog
     permissions:
       contents: write
 
