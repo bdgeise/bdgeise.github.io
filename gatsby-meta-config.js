@@ -28,6 +28,9 @@ const metaConfig = {
     linkedin: "https://www.linkedin.com/in/bdgeise",
   },
   favicon: "src/images/favicon.png",
+  analytics: {
+    betterlyticsSiteId: "bgeise-mlm9hwig", // Set to your Betterlytics site ID to enable analytics
+  },
 }
 
 // eslint-disable-next-line no-undef

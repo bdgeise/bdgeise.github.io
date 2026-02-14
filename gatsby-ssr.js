@@ -1,6 +1,19 @@
 const React = require("react")
+const meta = require("./gatsby-meta-config")
 
-exports.onRenderBody = ({ setPreBodyComponents }) => {
+exports.onRenderBody = ({ setHeadComponents, setPreBodyComponents }) => {
+  const betterlyticsSiteId = meta.analytics?.betterlyticsSiteId
+  if (betterlyticsSiteId) {
+    setHeadComponents([
+      React.createElement("script", {
+        key: "betterlytics",
+        async: true,
+        src: "https://betterlytics.io/analytics.js",
+        "data-site-id": betterlyticsSiteId,
+      }),
+    ])
+  }
+
   setPreBodyComponents([
     React.createElement("script", {
       key: "theme-script",
